@@ -16,7 +16,7 @@ CREATE TABLE results (
   PRIMARY KEY  (result_id),
   KEY session_id (session_id),
   KEY test_id (test_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -34,7 +34,7 @@ CREATE TABLE question_ordering (
   PRIMARY KEY  (question_ordering_id),
   KEY result_id (result_id),
   KEY question_id (question_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE answer_ordering (
   PRIMARY KEY  (answer_ordering_id),
   KEY question_ordering_id (question_ordering_id),
   KEY answer_id (answer_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
 
 -- --------------------------------------------------------
 

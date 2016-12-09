@@ -9,7 +9,7 @@ CREATE TABLE inode_groups (
   inode_id int(10) unsigned default NULL,
   KEY group_id (group_id),
   KEY inode_id (inode_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -32,7 +32,7 @@ CREATE TABLE groups (
   add_time_t int unsigned,
   PRIMARY KEY  (group_id),
   KEY cours_id (cours_id)
-) CHARSET=utf8  TYPE=MyISAM ;
+) CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -45,7 +45,7 @@ CREATE TABLE groups_usrs (
   usr_id int(10) unsigned default NULL,
   KEY group_id (group_id),
   KEY usr_id (usr_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8   ;
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE course_group_in_charge (
   group_in_charge_group_id int(10) unsigned NOT NULL default '0',
   KEY group_id (group_id),
   KEY group_in_charge_group_id (group_in_charge_group_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8   ;
 
 -- --------------------------------------------------------
 

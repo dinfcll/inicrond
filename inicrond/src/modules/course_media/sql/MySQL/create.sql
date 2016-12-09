@@ -17,7 +17,7 @@ CREATE TABLE chapitre_media (
   PRIMARY KEY  (chapitre_media_id),
   inode_id int unsigned,
   key inode_id (inode_id)
-) CHARSET=utf8  TYPE=MyISAM ;
+) CHARSET=utf8;
         
 -- 
 -- Table structure for table `ooo_inicrond_images`
@@ -34,7 +34,7 @@ CREATE TABLE inicrond_images (
   PRIMARY KEY  (img_id),
   inode_id int unsigned,
   key inode_id (inode_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
 
 -- 
 -- Table structure for table `ooo_inicrond_texts`
@@ -49,4 +49,4 @@ CREATE TABLE inicrond_texts (
   PRIMARY KEY  (text_id),
   inode_id int unsigned,
   key inode_id (inode_id)
-) CHARSET=utf8  TYPE=MyISAM;
+) CHARSET=utf8;
