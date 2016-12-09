@@ -188,7 +188,7 @@ if(!isset($_SESSION['usr_id']))//création de personnages
 
         include __INICROND_INCLUDE_PATH__."includes/functions/fonctions_validation.function.php";
 
-        $usr_name = filter($_POST['usr_name']);
+        $usr_name = $_POST['usr_name'];
 
         //insert l'utilisateur
         $query = "
@@ -223,12 +223,12 @@ if(!isset($_SESSION['usr_id']))//création de personnages
             )
             VALUES
             (
-            '".filter($_POST['usr_name'])."',
+            '".$_POST['usr_name']."',
             '".md5($_POST['usr_password'])."',
             ".inicrond_mktime().",
             '".$_POST['usr_email']."',
-            '".filter($_POST['usr_prenom'])."',
-            '".filter($_POST['usr_nom'])."'
+            '".$_POST['usr_prenom']."',
+            '".$_POST['usr_nom']."'
             )
             ";
 

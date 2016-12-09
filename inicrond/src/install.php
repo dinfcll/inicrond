@@ -93,7 +93,7 @@ else
 
                 for($i=0;$i< $count_keys;$i++)
                 {
-                        echo "<tr><td bgcolor=\"#adefbc\"  align=\"center\" >".$_LANG[$keys[$i]]."</td/><td bgcolor=\"#bdefbc\"><input type=\"text\" name=\"".$keys[$i]."\"  value=\"".$install_values[$keys[$i]]."\" /></td></tr>";
+                        echo "<tr><td bgcolor=\"#adefbc\"  align=\"center\" >".$_LANG[$keys[$i]]."</td><td bgcolor=\"#bdefbc\"><input type=\"text\" name=\"".$keys[$i]."\"  value=\"".$install_values[$keys[$i]]."\" /></td></tr>";
                 }
 
                 echo "<tr><td align=\"center\" colspan=\"2\"><input type=\"submit\" name=\"submit\"  value=\"".$_LANG['validate']."\" />          </td></tr></table></p></form>" ;
@@ -161,6 +161,7 @@ else
                         echo "<table bgcolor=\"#DFDFFE\" width=\"100%\"><tr><td><br />$file_name<br />";
 
                         $fp = openDir($_OPTIONS["file_path"]["mod_dir"]);
+                        echo $fp;
 
                         while($module_name = readDir($fp))
                         {
@@ -170,15 +171,16 @@ else
                                 $module_path = "modules/$module_name";
                                 $sql_path = "$module_path/sql";
 
-                                echo $sql_path."<br />";
+                                echo "asdf<br>".is_dir("modules/$module_name");
+                                echo "xyr".is_dir($sql_path);
 
                                 if(is_dir("modules/$module_name") && is_dir($sql_path))
                                 {
                                         echo "<table bgcolor=\"#ADEFDF\" width=\"100%\"><tr><td>";
 
                                         $file_path = "$sql_path/".$_OPTIONS['SGBD']."/".$file_name;
-
                                         if(is_file($file_path) )
+                                            echo "inif";
                                         //droping is not functionnal...
                                         {
                                                 echo "<table bgcolor=\"#EEEDEF\" width=\"100%\"><tr><td>";

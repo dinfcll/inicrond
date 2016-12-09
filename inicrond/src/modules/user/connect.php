@@ -53,7 +53,7 @@ else
         FROM
         ".$_OPTIONS['table_prefix'].$_OPTIONS['tables']['usrs']."
         WHERE
-        usr_name='".filter($usr_name)."'
+        usr_name='".$usr_name."'
         AND
         usr_md5_password='$usr_md5_password'
         ";
